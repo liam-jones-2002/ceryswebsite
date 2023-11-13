@@ -1,9 +1,4 @@
-body {
-    background-color:black
-}
-
-h2, p {
-    color: aliceblue;
+h2, p { 
     font-family: "Lucida Console", "Courier New", monospace;
   }
 
