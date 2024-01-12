@@ -1,6 +1,39 @@
-.cover_photo{
-    align-items: center;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.center{
-    padding-top: 500px;
+.cover{
+    background-size: cover;
+    margin: 0;
+    overflow: hidden;
+}
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+li {
+    display: inline-block;
+    margin-right: 30px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    text-decoration: underline;
+}
+.about{
+    text-align: center;
+    padding: 20px;
+}
+h1 {
+    padding-bottom: 20px;
+}
+footer {
+    background-color: black;
+    padding: 0%;
+    height: 20vh;
 }
