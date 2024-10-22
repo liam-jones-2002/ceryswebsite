@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cerys Jones</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/09a1f0247b.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="header">
     <div class="container">
         <nav>
-            <img src="images/logo.png" class="logo"> <!-- add logo here-->
+            <img src="images/logo.png" class="logo" alt="Cerys Jones logo">
             <ul>
                 <li><a href="#">HOME</a></li>
                 <li><a href="#">ABOUT</a></li>
@@ -25,22 +26,126 @@
         </div>
     </div>
 </div>
+
 <!-------------- about ----------->
+
 <div id="about">
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="img/user.jpg">
+                <img src="img/user.jpg" alt="Cerys profile picture">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
+                <p>Hello, I'm Cerys, a student studying in Cardiff.</p>
+
+                <div class="tab-title">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+
+                <!-- Skills Tab Content -->
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li>
+                            <span>UI/UX</span><br>
+                            Designing Web/App interfaces
+                        </li>
+                        <li>
+                            <span>Web Development</span><br>
+                            Web App Development
+                        </li>
+                        <li>
+                            <span>App Development</span><br>
+                            Building Android/iOS apps
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Experience Tab Content -->
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li>
+                            <span>UI/UX Designer</span><br>
+                            Designed user interfaces for mobile apps and websites.
+                        </li>
+                        <li>
+                            <span>Freelance Developer</span><br>
+                            Built custom websites for small businesses and individuals.
+                        </li>
+                        <li>
+                            <span>Intern at XYZ Corp</span><br>
+                            Assisted in web development and UI/UX design projects.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Education Tab Content -->
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li>
+                            <span>BSc in Computer Science</span><br>
+                            Cardiff University, 2018 - 2022
+                        </li>
+                        <li>
+                            <span>UI/UX Design Certification</span><br>
+                            Completed a certification on Coursera.
+                        </li>
+                        <li>
+                            <span>Web Development Course</span><br>
+                            Attended an intensive course on front-end development.
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+<!------- services --- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div class="service-item">
+                <i class="fa-solid fa-code service-icon"></i>
+                <h2>Web Design</h2>
+                <p>Creating modern and responsive websites that offer a seamless user experience.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="service-item">
+                <i class="fa-solid fa-crop service-icon"></i>
+                <h2>UI/UX Design</h2>
+                <p>Designing intuitive and visually appealing user interfaces for apps and websites.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="service-item">
+                <i class="fa-brands fa-app-store service-icon"></i>
+                <h2>App Design</h2>
+                <p>Developing user-friendly mobile apps for both Android and iOS platforms.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (let tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (let tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
 </body>
 </html>
-
-
 
